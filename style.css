@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+body{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100px;
+    font-weight: lighter;
+}
+
+.cal{
+    border:  10px solid black;
+    border-radius: 15px;
+    width: 425px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+}
+
+.display1{
+    background-color: black;
+    width: 380px;
+    height: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.display2{
+    background-color: black;
+    width: 380px;
+    height: 95px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 70px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.buttons{
+    background-color: black;
+    width: 425px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* Button Size, Border */
+.num1, .num2, .num3, .num4, .num5, .num6, .num7, .num8, .num9, .numF{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    border: none;
+    background-color: lightgray;
+}
+
+.num0{
+    width: 187px;
+    height: 90px;
+    border-radius: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    border: none;
+    background-color: lightgray;
+}
+
+.opA, .opS, .opM, .opD, .opE{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    border: none;
+    background-color: orange;
+}
+
+.clear, .delete{
+    width: 138px;
+    height: 90px;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    border: none;
+}
+
+.clear{
+    background-color: rgba(211, 211, 211, 0.804);
+}
+
+.delete{
+    background-color: rgb(246, 95, 95);
+}

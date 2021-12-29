@@ -116,7 +116,13 @@ function display1(a){
 }
 
 function display2(a){
-    document.querySelector('.display2').innerHTML=`${a}`;
+    if (a.toString().length>9){
+        a=a.toString().slice(0,9);
+        console.log('2312312');
+        document.querySelector('.display2').innerHTML=`${a}`;
+    } else{
+        document.querySelector('.display2').innerHTML=`${a}`;
+    }
 }
 
 

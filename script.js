@@ -99,12 +99,15 @@ let userInput ='';
 let op = '';
 
 function numButton(a){
-    if (a == '.' && !userInput.includes('.')){
-        userInput += a;
-        display2(userInput);
-    } else if (a!='.'){
-        userInput += a;
-        display2(userInput);
+    console.log(userInput.length);
+    if (userInput.length<9){
+        if (a == '.' && !userInput.includes('.')){
+            userInput += a;
+            display2(userInput);
+        } else if (a!='.'){
+            userInput += a;
+            display2(userInput);
+        }
     }
 }
 
@@ -169,12 +172,38 @@ function opDelete(){
 //#endregion
 
 //#region - Keyboard Support
-document.addEventListener('keydown', function(e){
-    if(e.key==='0' || e.key==='1' ||e.key==='2' || e.key==='3' || e.key==='4' || e.key==='5' || e.key==='6' || e.key==='7' || e.key==='8' || e.key==='9' || e.key === '.') numButton(e.key);
-    if(e.key==='Enter'||e.key==='=') equal();
-    if(e.key==='Escape') opClear();
-    if(e.key==='Backspace') opDelete();
-    if(e.key==='+'||e.key==='-'||e.key==='*'||e.key==='/') opButton(e.key);
+window.addEventListener('keydown', function(e){
+    if(e.key==='0' || e.key==='1' ||e.key==='2' || e.key==='3' || e.key==='4' || e.key==='5' || e.key==='6' || e.key==='7' || e.key==='8' || e.key==='9'){
+        document.querySelector(`.num${e.key}`).click();
+    } 
+    if(e.key === '.'){
+        document.querySelector('.numF').click();
+    }
+    if(e.key==='Enter'||e.key==='='){
+        document.querySelector('.opE').click();
+    }
+    if(e.key==='Escape'){
+        document.querySelector('.clear').click();
+    }
+    if(e.key==='Backspace'){
+        document.querySelector('.delete').click();
+    }
+    if(e.key==='+'||e.key==='-'||e.key==='*'||e.key==='/'){
+        switch (e.key){
+        case '+':
+            document.querySelector('.opA').click();
+            break;
+        case '-':
+            document.querySelector('.opS').click();
+            break;
+        case '*':
+            document.querySelector('.opM').click();
+            break;
+        case '/':
+            document.querySelector('.opD').click();
+            break;
+        }
+    }
 });
 //#endregion
 

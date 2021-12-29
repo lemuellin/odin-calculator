@@ -111,3 +111,36 @@ h1{
 .delete{
     background-color: rgb(246, 95, 95);
 }
+
+/* Button Hover Effect*/
+.num1:hover, .num2:hover, .num3:hover, .num4:hover, .num5:hover, .num6:hover, .num7:hover, .num8:hover, .num9:hover, .num0:hover, .numF:hover{
+    background-color: #EEEEEE;
+    transition: transform .15s; /* animation*/
+    transform: scale(1.03);
+}
+
+.opA:hover, .opS:hover, .opM:hover, .opD:hover, .opE:hover{
+    background-color: rgb(255, 181, 44);
+    transition: transform .15s; /* animation*/
+    transform: scale(1.03);
+}
+
+.clear:hover{
+    background-color: lightgray;
+    transition: transform .15s; /* animation*/
+    transform: scale(1.03);
+}
+
+.delete:hover{
+    background-color: rgb(255, 117, 58);
+    transition: transform .15s; /* animation*/
+    transform: scale(1.03);
+}
+
+/* logo rotating effect */
+/*
+.logo:hover{
+    transition: transform 0.5s;
+    transform: rotate(360deg) scale(1.2);
+}
+*/
